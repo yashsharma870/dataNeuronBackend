@@ -10,6 +10,8 @@ app.use(cors.default());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const port = process.env.PORT || 4000;
+
 app.use(ROUTES.api.root, apiRouter);
 
 mongoose
@@ -19,6 +21,6 @@ mongoose
   .then(() => console.log("Database connected successfully!"))
   .catch((e) => console.log(e));
 
-app.listen(env.SERVER_PORT, () => {
+app.listen(port, () => {
   return console.log(`Server started at port ${env.SERVER_PORT}`);
 });
