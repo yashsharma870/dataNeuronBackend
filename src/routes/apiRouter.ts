@@ -63,7 +63,7 @@ apiRouter.get(
       const add = await User.find({});
       let updatedCount = 0;
       add.map((user) => {
-        updatedCount += user.count;
+        updatedCount += user.count!;
       });
       const count = add.length;
       res.status(200).json({
