@@ -22,5 +22,5 @@ mongoose
   .catch((e) => console.log(e));
 
 app.listen(port, () => {
-  return console.log(`Server started at port ${env.SERVER_PORT}`);
+  return console.log(`Server started at port ${port}`);
 });
